@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.book.bookstore.mapper.OrdersMapper">
+    <select id="selectByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from orders
+    where
+    user_id = #{userId}
+  </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+     select * from orders
+    </select>
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select * from orders
+    where
+    order_num = #{orderNum}
+  </select>
+</mapper>
